@@ -1,4 +1,4 @@
-import Leker from '../../assets/images/monza-2024.jpg';
+// import Leker from '../../assets/images/monza-2024.jpg';
 import AquaFlux from '../../assets/images/aquaflux.png';
 import GrindCafe from '../../assets/images/grindCoffe.webp';
 import Stryd from '../../assets/images/stryd.png';
