@@ -38,8 +38,7 @@ export default function Porto() {
           className="col-span-3 w-[280px] h-[260px]"
         >
           <p>
-            A cozy branding project for <b>Grind Café</b> — where warm tones
-            meet modern identity.
+            Lorem ipsum dolor sit amet consectetur adipiscing elit. Dolor sit amet consectetur adipiscing elit quisque faucibus.
           </p>
         </HoverCard>
 
@@ -51,7 +50,7 @@ export default function Porto() {
           className="col-span-6 row-span-2 w-[500px] h-[370px] rounded-2xl" 
         >
           <p>
-            E-commerce website design for <b>STRYD</b> — when simplicity meet elegant design.
+            Lorem ipsum dolor sit amet consectetur adipiscing elit. Dolor sit amet consectetur adipiscing elit quisque faucibus.
           </p>
         </HoverCard>
 
@@ -62,8 +61,7 @@ export default function Porto() {
           className="col-span-3 w-[360px] h-[460px]"
         >
           <p>
-            A futuristic <b>branding</b> for AquaFlux — blending
-            technology with clean visual flow.
+            Lorem ipsum dolor sit amet consectetur adipiscing elit. Dolor sit amet consectetur adipiscing elit quisque faucibus.
           </p>
         </HoverCard>
 
@@ -74,8 +72,7 @@ export default function Porto() {
           className="col-span-3 row-span-2 w-[360px] h-[380px]"
         >
           <p>
-            Bold identity design for <b>PULSE GYM</b> — strength, motion, and
-            power visualized.
+            Lorem ipsum dolor sit amet consectetur adipiscing elit. Dolor sit amet consectetur adipiscing elit quisque faucibus.
           </p>
         </HoverCard>
 
@@ -86,8 +83,7 @@ export default function Porto() {
           className="col-span-3 row-span-2 w-[400px] h-[200px]"
         >
           <p>
-            Modern interface system built for <b>Aero</b> — clarity meets
-            structure.
+            Lorem ipsum dolor sit amet consectetur adipiscing elit. Dolor sit amet consectetur adipiscing elit quisque faucibus.
           </p>
         </HoverCard>
 
@@ -98,8 +94,7 @@ export default function Porto() {
           className="col-5 row-3 ml-12 w-[240px] h-[250px]"
         >
           <p>
-            Artistic concept for <b>Lyra</b> — gentle gradients and motion-based
-            visuals for a cosmic brand.
+            Lorem ipsum dolor sit amet consectetur adipiscing elit. Dolor sit amet consectetur adipiscing elit quisque faucibus.
           </p>
         </HoverCard>
 
@@ -110,7 +105,7 @@ export default function Porto() {
           className="col-8 row-3 -ml-8 w-[240px] h-[250px]"
         >
           <p>
-            Rebranding of finance technology company called <b>FINOVA</b> — minimalist typography, arranged in clean professional layout
+            Lorem ipsum dolor sit amet consectetur adipiscing elit. Dolor sit amet consectetur adipiscing elit quisque faucibus.
           </p>
         </HoverCard>
 

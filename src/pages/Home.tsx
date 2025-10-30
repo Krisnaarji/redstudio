@@ -4,7 +4,7 @@ import Service from '../components/homes/Service';
 
 export default function Home() {
     return (
-        <main className='bg-gradient-to-r from-red-900 to-black to-150%'>
+        <main >
             <Hero />
             <Porto />
             <Service />

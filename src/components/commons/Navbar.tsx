@@ -11,9 +11,9 @@ export default function Navbar(){
                     </div>
 
                     <div className="hidden md:flex items-center space-x-8">
-                        <a href="#home" className="text-white hover:text-red-600 transition-colors font-medium">Home</a>
+                        <a href="#home" className="text-white hover:text-red-600 transition-colors font-medium">About</a>
                         <a href="#about" className="text-white hover:text-red-600 transition-colors font-medium">Service</a>
-                        <a href="#works" className="text-white hover:text-red-600 transition-colors font-medium">About</a>
+                        <a href="#works" className="text-white hover:text-red-600 transition-colors font-medium">Contact</a>
                         <button className="bg-primary text-white px-6 py-3 rounded-lg hover:bg-red-600 transition-colors font-medium">
                             Get in Touch
                         </button>
