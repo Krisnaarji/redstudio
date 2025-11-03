@@ -1,6 +1,6 @@
 {
   "name": "redstudio",
-  "homepage": "git.gihub.com:Krisnaarji/redstudio",
+  "homepage": "git@github.com:Krisnaarji/redstudio",
   "private": true,
   "version": "0.0.0",
   "type": "module",
