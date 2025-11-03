@@ -1,4 +1,4 @@
-import HoverCard from "../commons/HoverCard"; // adjust path as needed
+import HoverCard from "../commons/HoverCard";
 import AquaFlux from "../../assets/images/aquaflux.png";
 import GrindCafe from "../../assets/images/grindCoffe.webp";
 import Stryd from "../../assets/images/stryd.png";

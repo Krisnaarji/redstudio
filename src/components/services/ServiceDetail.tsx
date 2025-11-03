@@ -1,17 +1,29 @@
-
+import { useState, useEffect, useRef } from 'react';
 import { services } from "./ServiceData";
 
 interface ServiceDetailProps {
     serviceId: string;
     onBack: () => void;
+    onServiceChange: (serviceId: string) => void;
 }
 
-    export default function ServiceDetail({ serviceId, onBack }: ServiceDetailProps) {
+export default function ServiceDetail({ serviceId, onBack, onServiceChange }: ServiceDetailProps) {
     const service = services.find((s) => s.id === serviceId);
+    const [openIndex, setOpenIndex] = useState(0);
+    const sectionRef = useRef<HTMLElement>(null);
+    
+    // Scroll to this section when component mounts or serviceId changes
+    useEffect(() => {
+        if (sectionRef.current) {
+            sectionRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    }, [serviceId]);
+    
     if (!service) return <p className="text-white">Service not found.</p>;
 
     return (
         <section 
+            ref={sectionRef}
             className="rounded-4xl top-0 left-0 w-full h-full text-white px-6 md:px-20 py-16"
             style={{
                 background: `
@@ -36,15 +48,14 @@ interface ServiceDetailProps {
             </div>
             
             <div className="relative flex items-center justify-center">
-                <div className="relative w-full h-full flex items-center justify-center p-12">
+                <div className="relative w-full h-full flex items-center justify-center p-12 ">
                     {service.heroImages.map((img, i) => (
                         <div
                             key={i}
-                            className="absolute w-70 h-100 rounded-4xl shadow-lg overflow-hidden"
+                            className="absolute w-70 h-100 rounded-4xl shadow-lg overflow-hidden backdrop-blur-sm border border-[#e8d5c4]/50 shadow-[0_8px_30px_rgba(139,69,19,0.12),0_2px_8px_rgba(139,69,19,0.08)] hover:shadow-[0_12px_40px_rgba(139,69,19,0.15),0_4px_12px_rgba(139,69,19,0.1)] transition-all duration-500 hover:-translate-y-1 cursor-pointer "
                             style={{
                                 transform: `rotate(${(i - 1) * 5}deg) translateX(${(i - 1) * 180}px)`,
                                 zIndex: i === 1 ? 5 : 5,
-                                backgroundColor: i === 1 ? '#000' : '#666'
                             }}
                         >
                             <img 
@@ -59,7 +70,7 @@ interface ServiceDetailProps {
         </div>
 
         {/* Why Important */}
-        <div className="relative grid grid-cols-2 bg-gray-900/70 p-10 rounded-3xl mb-16 h-200">
+        <div className="relative grid grid-cols-2 p-10 rounded-3xl mb-16 h-200 backdrop-blur-sm rounded-3xl border border-[#e8d5c4]/50 p-8 shadow-[0_8px_30px_rgba(139,69,19,0.12),0_2px_8px_rgba(139,69,19,0.08)] hover:shadow-[0_12px_40px_rgba(139,69,19,0.15),0_4px_12px_rgba(139,69,19,0.1)] cursor-pointer">
             <div className="flex flex-col gap-8">
                 <h3 className="font-semibold">W H Y ?</h3>
                 <h2 className="text-6xl font-semibold text-left">
@@ -69,7 +80,7 @@ interface ServiceDetailProps {
             </div>
             <div className="grid md:grid-row-3 gap-6">
                 {service.whyImportant.map((text, i) => (
-                    <div key={i} className="bg-gray-800 p-6 rounded-xl relative flex flex-col">
+                    <div key={i} className="backdrop-blur-sm rounded-3xl border border-[#e8d5c4]/50 p-8 shadow-[0_8px_30px_rgba(139,69,19,0.12),0_2px_8px_rgba(139,69,19,0.08)] hover:shadow-[0_12px_40px_rgba(139,69,19,0.15),0_4px_12px_rgba(139,69,19,0.1)] transition-all duration-500 hover:-translate-y-1 cursor-pointer p-6 rounded-xl relative flex flex-col">
                         <p className="text-4xl font-semibold text-gray-100 absolute top-6 left-6">
                             {i + 1}
                         </p>
@@ -82,18 +93,67 @@ interface ServiceDetailProps {
         </div>
         
         {/* FAQ */}
-        <div className="grid grid-cols-2">
-            <div className="space-y-4 max-w-3xl mx-auto">
-            {service.faq.map((faq, i) => (
-                <details key={i} className="bg-gray-800 p-4 rounded-xl cursor-pointer">
-                <summary className="font-semibold text-lg">{faq.q}</summary>
-                <p className="mt-2 text-sm opacity-90">{faq.a}</p>
-                </details>
-            ))}
+        <div className="grid grid-cols-2 items-center justify-items-center gap-8 mb-32">
+            <div className="space-y-4 w-full max-w-2xl">
+                {service.faq.map((faq, i) => (
+                    <div 
+                        key={i} 
+                        className="backdrop-blur-sm rounded-3xl border border-[#e8d5c4]/50 p-8 shadow-[0_8px_30px_rgba(139,69,19,0.12),0_2px_8px_rgba(139,69,19,0.08)] hover:shadow-[0_12px_40px_rgba(139,69,19,0.15),0_4px_12px_rgba(139,69,19,0.1)] cursor-pointer transition-all duration-300"
+                        onClick={() => setOpenIndex(openIndex === i ? -1 : i)}
+                    >
+                        <div className="font-semibold text-lg flex items-center justify-between">
+                            {faq.q}
+                            <span className={`text-2xl transform transition-transform duration-300 ${openIndex === i ? 'rotate-45' : ''}`}>
+                                +
+                            </span>
+                        </div>
+                        <div 
+                            className={`grid transition-all duration-500 ease-in-out ${
+                                openIndex === i ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'
+                            }`}
+                        >
+                            <div className="overflow-hidden">
+                                <p className="mt-4 text-sm opacity-90">
+                                    {faq.a}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                ))}
             </div>
-            <h2 className="text-3xl font-semibold mb-6 item-center text-center">FAQ’s</h2>
-        
+            <h2 className="text-8xl font-semibold text-center">FAQ's</h2>
         </div>
+
+
+        {/* Other Services */}
+        <div className="mt-32 mb-16">
+        <hr className='border border-[#e8d5c4]/50 mb-15'/>
+            <h2 className="text-5xl font-bold text-center mb-16">Other Services</h2>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-8xl mx-auto">
+                {services
+                    .filter(s => s.id !== serviceId)
+                    .slice(0, 3)
+                    .map((otherService) => (
+                        <div
+                            key={otherService.id}
+                            onClick={() => onServiceChange(otherService.id)}
+                            className="backdrop-blur-sm rounded-3xl border border-[#e8d5c4]/50 p-8 shadow-[0_8px_30px_rgba(139,69,19,0.12),0_2px_8px_rgba(139,69,19,0.08)] hover:shadow-[0_12px_40px_rgba(139,69,19,0.15),0_4px_12px_rgba(139,69,19,0.1)] transition-all duration-500 hover:-translate-y-1 cursor-pointer"
+                        >
+                            <h3 className="text-2xl font-serif text-white mb-4 leading-tight">
+                                {otherService.title}
+                            </h3>
+                            <p className="text-sky-200 text-sm leading-relaxed">
+                                {otherService.heroText.substring(0, 100)}...
+                            </p>
+                            <button className="mt-6 text-primary hover:text-red-400 transition-colors font-medium">
+                                Learn More →
+                            </button>
+                        </div>
+                    ))}
+            </div>
+        </div>
+
         </section>
     );
 }

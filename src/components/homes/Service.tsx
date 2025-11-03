@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import ServiceDetail from "../services/ServiceDetail";
 
 export default function Services() {
@@ -9,12 +9,13 @@ export default function Services() {
         <ServiceDetail
             serviceId={selectedService}
             onBack={() => setSelectedService(null)}
+            onServiceChange={(id) => setSelectedService(id)}
         />
         );
     }
 
     return (
-        <section className="min-h-screen flex flex-col items-center justify-center py-20 px-6 relative overflow-hidden rounded-4xl">
+        <section className="min-h-screen flex flex-col items-center justify-center relative overflow-hidden rounded-4xl pb-10">
         {/* Subtle light gradients */}
         <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_30%_20%,_rgba(255,255,255,0.5),_transparent_50%)]"></div>
         <div className="absolute bottom-0 right-0 w-full h-full bg-[radial-gradient(circle_at_70%_80%,_rgba(255,240,220,0.4),_transparent_50%)]"></div>
@@ -30,36 +31,7 @@ export default function Services() {
             OUR SERVICES
         </h1>
 
-        {/* Cards with connecting lines */}
         <div className="relative max-w-6xl w-full">
-            {/* Curved connecting lines */}
-            <svg
-            className="absolute inset-0 w-full h-full pointer-events-none"
-            style={{ zIndex: 0 }}
-            >
-            <path
-                d="M 300 180 Q 450 250, 600 180"
-                stroke="#c14a52"
-                strokeWidth="1.5"
-                fill="none"
-                opacity="0.4"
-            />
-            <path
-                d="M 250 420 Q 400 350, 650 420"
-                stroke="#c14a52"
-                strokeWidth="1.5"
-                fill="none"
-                opacity="0.4"
-            />
-            <path
-                d="M 580 200 Q 650 350, 720 500"
-                stroke="#c14a52"
-                strokeWidth="1.5"
-                fill="none"
-                opacity="0.4"
-            />
-            </svg>
-
             <div
             className="grid grid-cols-2 md:grid-cols-2 gap-x-32 gap-y-16 relative"
             style={{ zIndex: 1 }}
@@ -68,7 +40,7 @@ export default function Services() {
             <a onClick={() => setSelectedService("social-media-management")}>
                 <div className="backdrop-blur-sm rounded-3xl border border-[#e8d5c4]/50 p-8 shadow-[0_8px_30px_rgba(139,69,19,0.12),0_2px_8px_rgba(139,69,19,0.08)] hover:shadow-[0_12px_40px_rgba(139,69,19,0.15),0_4px_12px_rgba(139,69,19,0.1)] transition-all duration-500 hover:-translate-y-1 cursor-pointer">
                 <div className="flex items-start gap-6 mb-4">
-                    <div className="w-16 h-16 border-4 border-[#b85450] bg-white rounded-xl flex items-center justify-center flex-shrink-0 shadow-md">
+                    <div className="w-16 h-16 border-2 border-[#b85450] rounded-xl flex items-center justify-center flex-shrink-0 shadow-md">
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"
@@ -102,7 +74,7 @@ export default function Services() {
             <a onClick={() => setSelectedService("brand-development")}>
                 <div className="backdrop-blur-sm rounded-3xl border border-[#e8d5c4]/50 p-8 shadow-[0_8px_30px_rgba(139,69,19,0.12),0_2px_8px_rgba(139,69,19,0.08)] hover:shadow-[0_12px_40px_rgba(139,69,19,0.15),0_4px_12px_rgba(139,69,19,0.1)] transition-all duration-500 hover:-translate-y-1 md:translate-y-[-20px] cursor-pointer">
                 <div className="flex items-start gap-6 mb-4">
-                    <div className="w-16 h-16 bg-white border-4 border-[#b85450] rounded-xl flex items-center justify-center flex-shrink-0 shadow-md rotate-45">
+                    <div className="w-16 h-16 border-2 border-[#b85450] rounded-xl flex items-center justify-center flex-shrink-0 shadow-md rotate-45">
                     <div className="rotate-[-45deg]">
                         <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -138,7 +110,7 @@ export default function Services() {
             <a onClick={() => setSelectedService("brand-guidelines")}>
                 <div className="backdrop-blur-sm rounded-3xl border border-[#e8d5c4]/50 p-8 shadow-[0_8px_30px_rgba(139,69,19,0.12),0_2px_8px_rgba(139,69,19,0.08)] hover:shadow-[0_12px_40px_rgba(139,69,19,0.15),0_4px_12px_rgba(139,69,19,0.1)] transition-all duration-500 hover:-translate-y-1 md:translate-y-[20px] cursor-pointer">
                 <div className="flex items-start gap-6 mb-4">
-                    <div className="w-16 h-16 bg-white border-4 border-[#b85450] rounded-xl flex items-center justify-center flex-shrink-0 shadow-md rotate-45">
+                    <div className="w-16 h-16 border-2 border-[#b85450] rounded-xl flex items-center justify-center flex-shrink-0 shadow-md rotate-45">
                     <div className="rotate-[-45deg]">
                         <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
                         <rect
@@ -195,7 +167,7 @@ export default function Services() {
             <a onClick={() => setSelectedService("digital-marketing-consultation")}>
                 <div className="backdrop-blur-sm rounded-3xl border border-[#e8d5c4]/50 p-8 shadow-[0_8px_30px_rgba(139,69,19,0.12),0_2px_8px_rgba(139,69,19,0.08)] hover:shadow-[0_12px_40px_rgba(139,69,19,0.15),0_4px_12px_rgba(139,69,19,0.1)] transition-all duration-500 hover:-translate-y-1 cursor-pointer">
                 <div className="flex items-start gap-6 mb-4">
-                    <div className="w-16 h-16 bg-white border-4 border-[#b85450] rounded-xl flex items-center justify-center flex-shrink-0 shadow-md">
+                    <div className="w-16 h-16 border-2 border-[#b85450] rounded-xl flex items-center justify-center flex-shrink-0 shadow-md">
                     <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
                         <path
                         d="M12 2C12 2 16 6 19 9C22 12 22 16 19 19L12 22L5 19C2 16 2 12 5 9C8 6 12 2 12 2Z"
