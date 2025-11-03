@@ -1,7 +1,5 @@
 import { useState } from "react";
 
-
-
 interface HoverCardProps {
     image: string;
     alt: string;
