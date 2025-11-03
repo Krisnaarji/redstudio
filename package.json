@@ -14,7 +14,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy":"npm run build",
-    "deploy":"gh-pages -d dist"
+    "deploy":"gh-pages -d dist -r https://github.com/Krisnaarji/redstudio.git"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.16",
