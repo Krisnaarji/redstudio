@@ -24,7 +24,7 @@ export default function ServiceDetail({ serviceId, onBack, onServiceChange }: Se
     return (
         <section 
             ref={sectionRef}
-            className="rounded-4xl top-0 left-0 w-full h-full text-white px-6 md:px-20 py-16"
+            className="rounded-4xl top-0 left-0 w-full h-full text-white px-6 md:px-20 py-30"
             style={{
                 background: `
                     radial-gradient(circle at 30% 10%, rgba(255,255,255,0.5), transparent 35%),
@@ -32,9 +32,6 @@ export default function ServiceDetail({ serviceId, onBack, onServiceChange }: Se
                     #000
                 `
         }}>
-        <button onClick={onBack} className="mt-20 bg-primary text-white px-6 py-3 rounded-lg hover:bg-red-600 transition-colors font-medium">
-            ← Back to Services
-        </button>
 
         {/* Hero */}
         <div className="relative grid grid-cols-2 gap-8 mt-10 mb-30 min-h-[400px]">
@@ -45,6 +42,16 @@ export default function ServiceDetail({ serviceId, onBack, onServiceChange }: Se
                 <p className="text-lg text-white leading-relaxed">
                     {service.heroText}
                 </p>
+                <div className='flex flex-rows gap-3'>
+                <button onClick={onBack} className="px-5 py-3 mt-10 rounded-md bg-gradient-to-r from-red-900 to-primary border-2 border-primary text-white font-semibold hover:border-sky-300 transition-colors">
+                    ← Back to Services
+                </button>
+                <a href="#">
+                    <button className="px-5 py-3 mt-10 rounded-md bg-gradient-to-r from-red-900 to-primary border-2 border-primary text-white font-semibold hover:border-sky-300 transition-colors">
+                        Book a Meeting
+                    </button>
+                </a>
+                </div>
             </div>
             
             <div className="relative flex items-center justify-center">
@@ -130,7 +137,7 @@ export default function ServiceDetail({ serviceId, onBack, onServiceChange }: Se
         <hr className='border border-[#e8d5c4]/50 mb-15'/>
             <h2 className="text-5xl font-bold text-center mb-16">Other Services</h2>
             
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-8xl mx-auto">
+            <div className="grid grid-cols-3 gap-8 max-w-8xl mx-auto">
                 {services
                     .filter(s => s.id !== serviceId)
                     .slice(0, 3)
@@ -138,7 +145,7 @@ export default function ServiceDetail({ serviceId, onBack, onServiceChange }: Se
                         <div
                             key={otherService.id}
                             onClick={() => onServiceChange(otherService.id)}
-                            className="backdrop-blur-sm rounded-3xl border border-[#e8d5c4]/50 p-8 shadow-[0_8px_30px_rgba(139,69,19,0.12),0_2px_8px_rgba(139,69,19,0.08)] hover:shadow-[0_12px_40px_rgba(139,69,19,0.15),0_4px_12px_rgba(139,69,19,0.1)] transition-all duration-500 hover:-translate-y-1 cursor-pointer"
+                            className="grid grid-row-3 backdrop-blur-sm rounded-3xl border border-[#e8d5c4]/50 p-8 shadow-[0_8px_30px_rgba(139,69,19,0.12),0_2px_8px_rgba(139,69,19,0.08)] hover:shadow-[0_12px_40px_rgba(139,69,19,0.15),0_4px_12px_rgba(139,69,19,0.1)] transition-all duration-500 hover:-translate-y-1 cursor-pointer"
                         >
                             <h3 className="text-2xl font-serif text-white mb-4 leading-tight">
                                 {otherService.title}
@@ -146,7 +153,7 @@ export default function ServiceDetail({ serviceId, onBack, onServiceChange }: Se
                             <p className="text-sky-200 text-sm leading-relaxed">
                                 {otherService.heroText.substring(0, 100)}...
                             </p>
-                            <button className="mt-6 text-primary hover:text-red-400 transition-colors font-medium">
+                            <button className="mt-6 text-left text-primary hover:text-red-400 transition-colors font-medium">
                                 Learn More →
                             </button>
                         </div>

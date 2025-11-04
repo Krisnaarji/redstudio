@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import ServiceDetail from "../services/ServiceDetail";
 
 export default function Services() {
@@ -15,7 +15,7 @@ export default function Services() {
     }
 
     return (
-        <section className="min-h-screen flex flex-col items-center justify-center relative overflow-hidden rounded-4xl pb-10">
+        <section id="service" className="min-h-screen flex flex-col items-center justify-center relative overflow-hidden rounded-4xl pb-10">
         {/* Subtle light gradients */}
         <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_30%_20%,_rgba(255,255,255,0.5),_transparent_50%)]"></div>
         <div className="absolute bottom-0 right-0 w-full h-full bg-[radial-gradient(circle_at_70%_80%,_rgba(255,240,220,0.4),_transparent_50%)]"></div>

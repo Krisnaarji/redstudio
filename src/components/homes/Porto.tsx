@@ -9,7 +9,9 @@ import Lyra from "../../assets/images/lyra.png";
 
 export default function Porto() {
   return (
-    <section id="porto" className="py-10 pt-20 text-center">
+    <section id="porto" className="py-10 pt-20 text-center"
+      
+    >
 
       <h1 className="text-4xl md:text-5xl font-bold text-white mb-3 drop-shadow-[5px_5px_10px_#7dd3fc]">
         OUR WORKS

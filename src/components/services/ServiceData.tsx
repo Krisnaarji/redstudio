@@ -38,7 +38,7 @@ export const services = [
         title: "Brand Development",
         heroText:
             "Branding, or brand development, is the crafting and molding of a unique identity for a product, service, or company. This process establishes a cohesive brand image that connects with the target audience and sets it apart from competitors.",
-        heroImages: ["/assets/portoA.webp", "/assets/portoB.webp", "/assets/portoC.webp"],
+        heroImages: [AquaFlux, GrindCafe, Stryd],
         whyImportant: [
             "Branding gives your company a distinct and memorable identity in a competitive market.",
             "It builds trust and emotional connection with your audience, enhancing loyalty.",
@@ -64,7 +64,7 @@ export const services = [
         title: "Digital Branding & Marketing Consultation",
         heroText:
             "Consulting for digital branding and marketing involves seeking professional guidance to develop and execute effective strategies for brand awareness, audience engagement, and business growth on online platforms.",
-        heroImages: ["/assets/portoA.webp", "/assets/portoB.webp", "/assets/portoC.webp"],
+        heroImages: [AquaFlux, GrindCafe, Stryd],
         whyImportant: [
             "Digital marketing enables measurable growth and precise targeting across online channels.",
             "It provides real-time analytics for better decision-making and ROI tracking.",
@@ -90,7 +90,7 @@ export const services = [
         title: "Social Media Management",
         heroText:
             "Social media management is the process of overseeing and controlling an entity's presence on social platforms. This includes content creation, curation, publishing, community engagement, and monitoring campaign performance.",
-        heroImages: ["/assets/portoA.webp", "/assets/portoB.webp", "/assets/portoC.webp"],
+        heroImages: [AquaFlux, GrindCafe, Stryd],
         whyImportant: [
             "Social media management connects your business with your audience in real time building not just visibility, but meaningful relationships through daily interaction and storytelling.",
             "It strengthens your brand’s voice by maintaining consistent visuals, tone, and messaging across platforms, helping you stay top-of-mind while creating a community that genuinely engages with your brand.",

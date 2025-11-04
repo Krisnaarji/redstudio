@@ -2,7 +2,7 @@ import RLogo from '../../assets/images/R.png';
 
 export default function Hero() {
     return (
-        <section className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden text-white rounded-4xl">
+        <section id='home' className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden text-white rounded-4xl">
 
             <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_30%_20%,_rgba(255,255,255,0.5),_transparent_50%)]"></div>
             <div className="absolute bottom-0 right-0 w-full h-full bg-[radial-gradient(circle_at_70%_80%,_rgba(255,240,220,0.4),_transparent_50%)]"></div>
