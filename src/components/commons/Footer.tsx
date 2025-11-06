@@ -40,7 +40,7 @@ export default function Footer() {
                 <h3 className="font-semibold mb-4">Contact</h3>
                 <ul className="space-y-2">
                 <li><span className="text-sm text-muted-foreground">info@redstudio.com</span></li>
-                <li><span className="text-sm text-muted-foreground">+1 (555) 123-4567</span></li>
+                <li><span className="text-sm text-muted-foreground">+55 (555) 555-555</span></li>
                 </ul>
                 <br />
                 <div className='flex gap-4'>

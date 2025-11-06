@@ -4,7 +4,7 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/Krisnaarji/redstudio.git"
-    },
+  },
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -13,12 +13,13 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "predeploy":"npm run build",
-    "deploy":"gh-pages -d dist -r https://github.com/Krisnaarji/redstudio.git"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist -r https://github.com/Krisnaarji/redstudio.git"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.16",
     "gh-pages": "^6.3.0",
+    "lucide-react": "^0.552.0",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
     "tailwindcss": "^4.1.16"

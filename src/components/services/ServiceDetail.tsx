@@ -1,5 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { services } from "./ServiceData";
+import ContactModal from "../contacts/ContactModal";
+
 
 interface ServiceDetailProps {
     serviceId: string;
@@ -8,6 +10,7 @@ interface ServiceDetailProps {
 }
 
 export default function ServiceDetail({ serviceId, onBack, onServiceChange }: ServiceDetailProps) {
+    const [isModalOpen, setIsModalOpen] = useState(false);
     const service = services.find((s) => s.id === serviceId);
     const [openIndex, setOpenIndex] = useState(0);
     const sectionRef = useRef<HTMLElement>(null);
@@ -23,6 +26,7 @@ export default function ServiceDetail({ serviceId, onBack, onServiceChange }: Se
 
     return (
         <section 
+            id='service'
             ref={sectionRef}
             className="rounded-4xl top-0 left-0 w-full h-full text-white px-6 md:px-20 py-30"
             style={{
@@ -46,11 +50,10 @@ export default function ServiceDetail({ serviceId, onBack, onServiceChange }: Se
                 <button onClick={onBack} className="px-5 py-3 mt-10 rounded-md bg-gradient-to-r from-red-900 to-primary border-2 border-primary text-white font-semibold hover:border-sky-300 transition-colors">
                     ← Back to Services
                 </button>
-                <a href="#">
-                    <button className="px-5 py-3 mt-10 rounded-md bg-gradient-to-r from-red-900 to-primary border-2 border-primary text-white font-semibold hover:border-sky-300 transition-colors">
+                    <button onClick={() => setIsModalOpen(true)} className="px-5 py-3 mt-10 rounded-md bg-gradient-to-r from-red-900 to-primary border-2 border-primary text-white font-semibold hover:border-sky-300 transition-colors">
                         Book a Meeting
                     </button>
-                </a>
+                
                 </div>
             </div>
             
@@ -160,6 +163,8 @@ export default function ServiceDetail({ serviceId, onBack, onServiceChange }: Se
                     ))}
             </div>
         </div>
+
+        {isModalOpen && <ContactModal onClose={() => setIsModalOpen(false)} />}
 
         </section>
     );
