@@ -1,20 +1,23 @@
 import { useEffect, useRef, useState } from "react";
-import AquaFlux from "../../assets/images/aquaflux.png";
-import GrindCafe from "../../assets/images/grindCoffe.webp";
-import Stryd from "../../assets/images/stryd.png";
-import Finova from "../../assets/images/finova.png";
-import PulseGYM from "../../assets/images/pulseGYM.png";
-import Aero from "../../assets/images/aeroGuidelines.png";
-import Lyra from "../../assets/images/lyra.png";
+
+import tamjep1 from "../../assets/images/tamjep1.jpg";
+import tamjep2 from "../../assets/images/tamjep2.jpg";
+import tamjep3 from "../../assets/images/tamjep3.jpg";
+import tamjep4 from "../../assets/images/tamjep4.jpg";
+import tamjep5 from "../../assets/images/tamjep5.jpg";
+import tamjep6 from "../../assets/images/tamjep6.jpg";
+import tamjep7 from "../../assets/images/tamjep7.jpg";
+
 
 const works = [
-  { image: Stryd, alt: "Stryd E-commerce", desc: "Modern e-commerce platform with responsive design and seamless user experience." },
-  { image: AquaFlux, alt: "AquaFlux", desc: "Premium product branding and packaging design for lifestyle brand." },
-  { image: GrindCafe, alt: "Grind Café", desc: "Complete brand identity and menu design for artisan coffee shop." },
-  { image: PulseGYM, alt: "Pulse GYM", desc: "Dynamic fitness app interface with tracking and motivation features." },
-  { image: Aero, alt: "Aero Guidelines", desc: "Comprehensive design system and brand guidelines documentation." },
-  { image: Lyra, alt: "Lyra Branding", desc: "Elegant cosmetics brand identity with minimalist aesthetic." },
-  { image: Finova, alt: "Finova", desc: "Finance technology platform with intuitive dashboard design." },
+  { image: tamjep1, alt: "Istana Taman Jepun", desc: "A clean, elegant logo design representing the serenity and natural charm of Istana Taman Jepun through minimalist floral symbolism." },
+  { image: tamjep2, alt: "Istana Taman Jepun", desc: "Consistent application of the logo across different visual contexts, ensuring strong brand recall and versatility." },
+  { image: tamjep3, alt: "Istana Taman Jepun", desc: "Communicates Istana Taman Jepun as a venue that blends nature, culture, and modern outdoor experiences for weddings and community events." },
+  { image: tamjep4, alt: "Istana Taman Jepun", desc: "A collage of real venue photography highlighting outdoor beauty, cultural ambience, and joyful event moments." },
+  { image: tamjep5, alt: "Istana Taman Jepun", desc: "Warm earthy tones—green, orange, and beige—evoke nature, hospitality, and timeless elegance." },
+  { image: tamjep6, alt: "Istana Taman Jepun", desc: "Alternate logo treatments and lockups adapted for various use cases including print, digital, and merchandise." },
+  { image: tamjep7, alt: "Istana Taman Jepun", desc: "Modern brochure layout combining brand visuals, local culinary imagery, and key messaging to create an inviting promotional piece." },
+
 ];
 
 // Setup for the 3-copy loop

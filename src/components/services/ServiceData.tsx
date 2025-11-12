@@ -1,10 +1,7 @@
-import AquaFlux from "../../assets/images/aquaflux.png";
-import GrindCafe from "../../assets/images/grindCoffe.webp";
-import Stryd from "../../assets/images/stryd.png";
-// import Finova from "../../assets/images/finova.png";
-// import PulseGYM from "../../assets/images/pulseGYM.png";
-// import Aero from "../../assets/images/aeroGuidelines.png";
-// import Lyra from "../../assets/images/lyra.png";
+import tamjep1 from "../../assets/images/tamjep1.jpg";
+import tamjep2 from "../../assets/images/tamjep2.jpg";
+import tamjep3 from "../../assets/images/tamjep3.jpg";
+
 
 export const services = [
     {
@@ -12,7 +9,7 @@ export const services = [
         title: "Brand Guidelines",
         heroText:
             "Brand guidelines, or manuals, provide consistent presentation rules across platforms, defining elements like logos, colors, typography, and layout. They maintain a cohesive and recognizable brand identity in communications.",
-        heroImages: [AquaFlux, GrindCafe, Stryd],
+        heroImages: [tamjep1, tamjep2, tamjep3],
         whyImportant: [
             "Brand guidelines ensure consistency across every platform, strengthening brand recognition and trust.",
             "They create a professional and cohesive image, improving perception and credibility.",
@@ -38,7 +35,7 @@ export const services = [
         title: "Brand Development",
         heroText:
             "Branding, or brand development, is the crafting and molding of a unique identity for a product, service, or company. This process establishes a cohesive brand image that connects with the target audience and sets it apart from competitors.",
-        heroImages: [AquaFlux, GrindCafe, Stryd],
+        heroImages: [tamjep1, tamjep2, tamjep3],
         whyImportant: [
             "Branding gives your company a distinct and memorable identity in a competitive market.",
             "It builds trust and emotional connection with your audience, enhancing loyalty.",
@@ -64,7 +61,7 @@ export const services = [
         title: "Digital Branding & Marketing Consultation",
         heroText:
             "Consulting for digital branding and marketing involves seeking professional guidance to develop and execute effective strategies for brand awareness, audience engagement, and business growth on online platforms.",
-        heroImages: [AquaFlux, GrindCafe, Stryd],
+        heroImages: [tamjep1, tamjep2, tamjep3],
         whyImportant: [
             "Digital marketing enables measurable growth and precise targeting across online channels.",
             "It provides real-time analytics for better decision-making and ROI tracking.",
@@ -90,7 +87,7 @@ export const services = [
         title: "Social Media Management",
         heroText:
             "Social media management is the process of overseeing and controlling an entity's presence on social platforms. This includes content creation, curation, publishing, community engagement, and monitoring campaign performance.",
-        heroImages: [AquaFlux, GrindCafe, Stryd],
+        heroImages: [tamjep1, tamjep2, tamjep3],
         whyImportant: [
             "Social media management connects your business with your audience in real time building not just visibility, but meaningful relationships through daily interaction and storytelling.",
             "It strengthens your brand’s voice by maintaining consistent visuals, tone, and messaging across platforms, helping you stay top-of-mind while creating a community that genuinely engages with your brand.",
