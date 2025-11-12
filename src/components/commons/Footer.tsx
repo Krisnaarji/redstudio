@@ -8,7 +8,7 @@ export default function Footer() {
         
         {/* Content */}
         <div className="relative z-10 container mx-auto px-10">
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-40 mb-8">
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-8 lg:gap-40 mb-8">
             <div className="col-span-1">
                 <img src={redStudio} alt="Red Studio" className="h-15 mb-4" />
                 <p className="text-sm text-muted-foreground">

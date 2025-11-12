@@ -13,12 +13,12 @@ export default function Hero() {
                 <img 
                     src={RLogo}
                     alt="Red Studio Logo" 
-                    className="w-64 lg:w-80 xl:w-96 opacity-90 drop-shadow-[10px_0_20px_#7dd3fc]"
+                    className="w-64 lg:w-80 xl:w-96 opacity-90 drop-shadow-[10px_0_20px_#7F1D1D]"
                 />
                 </div>
 
                 <div className="space-y-9 animate-fade-in-up">
-                    <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight text-shadow-lg text-shadow-sky-300 ">
+                    <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight text-shadow-lg text-shadow-red-900 ">
                         <span className="">Branding.</span><br />
                         <span className="text-primary">Strategy.</span><br />
                         <span>Creativity.</span>
@@ -30,7 +30,7 @@ export default function Hero() {
 
                     <div className="flex flex-wrap justify-center lg:justify-start gap-4">
                         <a href="#porto">
-                            <button className="px-5 py-3 rounded-md bg-gradient-to-r from-red-900 to-primary border-2 border-primary text-white font-semibold hover:border-sky-300 transition-colors drop-shadow-[2px_2px_4px_#7dd3fc]">
+                            <button className="px-5 py-3 rounded-md bg-gradient-to-r from-red-900 to-primary border-2 border-primary text-white font-semibold hover:border-sky-300 transition-colors drop-shadow-[2px_2px_4px_#7F1D1D]">
                             Learn More
                             </button>
                         </a>

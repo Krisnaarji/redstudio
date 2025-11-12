@@ -7,7 +7,7 @@ interface ContactModalProps {
 export default function ContactModal({ onClose }: ContactModalProps) {
     return ReactDOM.createPortal(
         <div className="fixed inset-0 bg-black/70 backdrop-blur-sm z-[1000] flex items-center justify-center">
-        <div className="bg-white text-gray-900 rounded-2xl shadow-xl max-w-4xl w-full mx-4 p-8 relative overflow-y-auto max-h-[90vh]">
+        <div className="bg-white text-gray-900 rounded-2xl shadow-xl max-w-5xl w-full mx-4 p-8 relative overflow-y-auto max-h-[90vh]">
             {/* Close button */}
             <button
             onClick={onClose}
@@ -19,7 +19,7 @@ export default function ContactModal({ onClose }: ContactModalProps) {
             {/* Content */}
             <div className="flex">
 
-            <h1 className="text-4xl font-bold mb-4">Contact our team</h1>
+            <h1 className="text-4xl font-bold mb-4 text-red-900">Contact our team</h1>
             <p className="text-gray-600 m-4">
             Got any questions about the product or scaling on our platform? We’re here to help.
             Chat to our friendly team and get onboard in less than 5 minutes.
@@ -61,9 +61,9 @@ export default function ContactModal({ onClose }: ContactModalProps) {
             {/* Right – info */}
             <div className="space-y-8">
                 <div>
-                <h2 className="font-semibold text-lg mb-2">Chat with us</h2>
+                <h2 className="font-semibold text-lg mb-2 text-red-900">Chat with us</h2>
                 <p className="text-gray-600 mb-3">Speak to our friendly team</p>
-                    <p className="mb-2 text-black hover:underline">Message us on </p>
+                    <p className="mb-2 text-red-900 hover:underline">Message us on </p>
                         <a href="https://wa.me/15551234567" target="_blank">
                             <span className="[&>svg]:h-10 [&>svg]:w-10">
                             <svg
@@ -78,7 +78,7 @@ export default function ContactModal({ onClose }: ContactModalProps) {
                 </div>
 
                 <div>
-                <h2 className="font-semibold text-lg mb-2">Call us</h2>
+                <h2 className="font-semibold text-lg mb-2 text-red-900">Call us</h2>
                 <p className="text-gray-600 mb-1">Call our team Mon–Fri from 10am to 6pm.</p>
                 <a href="tel:+1555000000" className="text-black font-medium hover:underline">
                     +55 (555) 555-555
@@ -86,7 +86,7 @@ export default function ContactModal({ onClose }: ContactModalProps) {
                 </div>
 
                 <div>
-                <h2 className="font-semibold text-lg mb-2">Visit us</h2>
+                <h2 className="font-semibold text-lg mb-2 text-red-900">Visit us</h2>
                 <p className="text-gray-600 mb-1">Chat to us in person at our Bussiness Hub.</p>
                 <a href="https://www.google.com/maps/place/RED+SYSTEM+BALI+WEBSITE+DEVELOPER/@-8.6806916,115.2458622,17z/data=!3m1!4b1!4m6!3m5!1s0x2dd23fae714de88b:0x7216cd57648a4f83!8m2!3d-8.6806916!4d115.2484371!16s%2Fg%2F11h_sdf183?entry=ttu&g_ep=EgoyMDI1MTEwMi4wIKXMDSoASAFQAw%3D%3D" target="_blank" className="text-black font-medium hover:underline">
                     Jl. Tukad Anyar 1 No.1, Sanur, Denpasar Selatan, Kota Denpasar, Bali
