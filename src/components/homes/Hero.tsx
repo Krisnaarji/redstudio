@@ -28,7 +28,7 @@ export default function Hero() {
                         <span className="font-bold text-primary">R.E.D</span> <span className="font-semibold">Studio™</span> transforms ideas into powerful digital identities combining strategy, creativity, and technology to help brands grow and connect.
                     </p>
 
-                    <div className="flex flex-wrap justify-center lg:justify-start gap-4">
+                    <div className="flex flex-wrap justify-center lg:justify-start gap-4 mb-4 sm:mb-4 lg:mb-0">
                         <a href="#porto">
                             <button className="px-5 py-3 rounded-md bg-gradient-to-r from-red-900 to-primary border-2 border-primary text-white font-semibold hover:border-sky-300 transition-colors drop-shadow-[2px_2px_4px_#7F1D1D]">
                             Learn More

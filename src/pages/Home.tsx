@@ -3,8 +3,6 @@ import Porto from '../components/homes/Porto';
 import Service from '../components/homes/Service';
 
 export default function Home() {
-
-
     return (
         
         <main >
